@@ -1,7 +1,12 @@
 import React from 'react'
+import KPICards from '../components/Dashboard/KPICards'
+import Charts from '../components/Dashboard/Charts'
 
 export const DashboardPage = () => {
   return (
-    <div>DashboardPage</div>
+    <div>
+        <KPICards/>
+        <Charts/>
+    </div>
   )
 }

@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "./contexts/AuthContext";
-import { DashboardPage } from "./pages/DashboardPage";
-import LoginPage from "./pages/LoginPage";
-// import Login from "./components/Authentication/LoginForm";
+import { MainContent } from "./pages/MainContentroute";
+import { Sidebar } from "./components/sidebar/Sidebar";
 
 const PrivateRoute = ({ children }) => {
   const { user } = useAuth();
@@ -13,18 +12,10 @@ const PrivateRoute = ({ children }) => {
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/login" element={<LoginPage/>} />
-        <Route
-          path="/dashboard"
-          element={
-            <PrivateRoute>
-              <DashboardPage />
-            </PrivateRoute>
-          }
-        />
-        <Route path="*" element={<Navigate to="/login" />} />
-      </Routes>
+     <div className="flex min-h-screen">
+        <Sidebar />
+        <MainContent />
+      </div>
     </Router>
   );
 }
