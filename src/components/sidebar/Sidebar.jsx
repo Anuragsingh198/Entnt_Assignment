@@ -5,11 +5,11 @@ export const Sidebar = () => {
   const [activeItem, setActiveItem] = useState('');
 
   return (
-    <div className="w-64 bg-gray-800 text-white p-5 shadow-lg">
+    <div className="w-64 bg-gray-800 text-white p-5 shadow-lg mt-6 rounded-xl">
       <h2 className="text-xl font-semibold mb-8 pb-2 border-b border-gray-700">Navigation</h2>
       
       <nav>
-        <ul className="space-y-4">
+        <ul className="space-y-4 ">
           <SidebarItem 
             title="Ships" 
             active={activeItem === 'ships'} 

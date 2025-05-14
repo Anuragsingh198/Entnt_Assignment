@@ -5,7 +5,7 @@ const LoginPage = () => {
   return (
     <>
    <div
-  className="bg-cover bg-center flex items-center justify-center"
+  className="bg-cover bg-center flex items-center justify-center rounded-2xl"
   style={{ backgroundImage: `url(${Loginimage})` }}
 >
   <Login />

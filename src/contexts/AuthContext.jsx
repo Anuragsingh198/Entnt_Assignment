@@ -1,16 +1,19 @@
-import React, { createContext, useContext, useState } from "react";
-import { users } from "../data";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { data } from "../data.js";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  const [allUsers , SetAllusers] =   useState(()=> (data && data.users) ? data.users : []);
   const [user, setUser] = useState(() => {
     const storedUser = localStorage.getItem("user");
     return storedUser ? JSON.parse(storedUser) : null;
   });
+  
 
   const login = (email, password) => {
-    const new_user = users.find(
+    // console.log("email and password is : " , password , email)
+    const new_user = allUsers.find(
       (user) => user.email === email && user.password === password
     );
     if (new_user) {

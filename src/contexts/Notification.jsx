@@ -7,7 +7,7 @@ export const NotificationProvider = ({ children }) => {
   const [notification, setNotification] = useState(null);
   const timeoutRef = useRef(null);
 
-  const showNotification = ({ message, type = "info", duration = 3000 }) => {
+  const showNotification = ({ message, type = "info", duration = 10000 }) => {
     setNotification({ message, type });
 
     if (timeoutRef.current) {
