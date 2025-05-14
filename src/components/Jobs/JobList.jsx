@@ -10,6 +10,7 @@ const JobList = () => {
 
   const [editingJob, setEditingJob] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const[]
   const [filters, setFilters] = useState({
     shipId: '',
     status: '',
@@ -34,7 +35,9 @@ const JobList = () => {
       });
     }
   };
-
+ const   handleAddjob=(job)=>{
+   dispatch{type:""}
+ }
   const filteredJobs = useMemo(() => {
     return jobs.filter(
       (job) =>
@@ -53,21 +56,12 @@ const JobList = () => {
       {showForm && (
         <JobForm
           job={editingJob}
-          onSubmit={(job) => {
-            if (editingJob) {
-              dispatch({ type: 'UPDATE_JOB', payload: job });
-            } else {
-              dispatch({ type: 'CREATE_JOB', payload: job });
-            }
-            setShowForm(false);
-            setEditingJob(null);
-          }}
+          onSubmit={}
           setShow={setShowForm}
-          title={editingJob ? 'Edit Job' : 'Create Job'}
+          title={ 'Create Job'}
         />
       )}
-
-      {/* Top Bar: Create + Filters */}
+  
       <div className="flex justify-between items-center">
         <button
           onClick={() => {
