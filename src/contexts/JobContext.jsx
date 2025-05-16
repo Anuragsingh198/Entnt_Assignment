@@ -1,15 +1,12 @@
 import React, { createContext, useContext, useReducer, useEffect } from "react";
 import { data } from "../data.js";
 
-// Initial state
 const initialState = {
     role:JSON.parse(localStorage.getItem('role'))||null,
    user: JSON.parse(localStorage.getItem("user")) || null,
-//   users: JSON.parse(localStorage.getItem("users")) || data.users || [],
   jobs: JSON.parse(localStorage.getItem("jobs")) || data.jobs || [],
 };
 
-// Reducer function
 const jobReducer = (state, action) => {
   switch (action.type) {
     case "ADD_JOB":

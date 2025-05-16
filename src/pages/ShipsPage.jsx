@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ShipDetail from '../components/Ships/ShipDetail';
 import ShipList from '../components/Ships/ShipList';
 import ShipForm from '../components/Ships/ShipForm';
 import { data } from '../data.js';
+import { useShip } from '../contexts/ShipsContext.jsx';
 
 const ShipsPage = () => {
-  const [allShips, setAllShips] = useState([]);
+  const { state, dispatch } = useShip();
+  const allShips = state.ships;
+
   const [showForm, setShowForm] = useState(false);
   const [shipFormTitle, setShipFormTitle] = useState('');
 
   useEffect(() => {
     const savedData = localStorage.getItem('ships');
     if (savedData) {
-      const parsed = JSON.parse(savedData);
-      setAllShips(parsed || []);
+      dispatch({ type: 'LOAD_SHIPS', payload: JSON.parse(savedData) });
     } else {
       localStorage.setItem('ships', JSON.stringify(data.ships));
-      setAllShips(data.ships);
+      dispatch({ type: 'LOAD_SHIPS', payload: data.ships });
     }
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
-    if (allShips.length > 0) {
-      localStorage.setItem('ships', JSON.stringify(allShips));
-    }
+    localStorage.setItem('ships', JSON.stringify(allShips));
   }, [allShips]);
 
   const handleAddShip = () => {
@@ -32,14 +32,13 @@ const ShipsPage = () => {
   };
 
   const handleFormSubmit = (newShip) => {
-    // Assign unique id
     newShip.id = Date.now();
-    setAllShips([...allShips, newShip]);
+    dispatch({ type: 'ADD_SHIP', payload: newShip });
     setShowForm(false);
   };
 
   const handleUpdateShips = (updatedShips) => {
-    setAllShips(updatedShips);
+    dispatch({ type: 'REPLACE_ALL_SHIPS', payload: updatedShips });
   };
 
   return (
@@ -51,12 +50,6 @@ const ShipsPage = () => {
         <h1 className="text-white text-2xl font-semibold">Ships</h1>
       </div>
       <div className="w-full flex flex-col gap-3 mt-2">
-        <button
-          onClick={handleAddShip}
-          className="self-start h-auto px-2 py-1 bg-blue-100 border-blue-600 border-1 font-semibold rounded-4xl shadow-md text-blue-700"
-        >
-          Add New Ship
-        </button>
         <div className="w-full">
           <ShipList allShips={allShips} setAllShips={handleUpdateShips} />
         </div>
