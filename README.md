@@ -4,6 +4,12 @@ A fully functional Ship Maintenance Dashboard built using React + Vite, designed
 🔗 Live Demo
 👉 https://entnt-assignment-flame.vercel.app
 
+🚢 Ship Maintenance Dashboard
+A fully functional Ship Maintenance Dashboard built using React + Vite, designed to manage ships, components, and job scheduling with detailed analytics and role-based access. This project was built as part of an assignment and includes all the features mentioned in the provided specification.
+
+🔗 Live Demo
+👉 https://entnt-assignment-flame.vercel.app
+
 ✨ Features
 🔐 Role-Based Login System
 Users can log in by selecting a role (Admin, Engineer, Inspector), which defines their access level.
@@ -40,29 +46,7 @@ Routing	React Router
 Charts	Recharts
 Deployment	Vercel
 
-📁 Folder Structure (Simplified)
-├── components/
-│   ├── Login.jsx
-│   ├── Dashboard.jsx
-│   ├── ShipDetail.jsx
-│   └── CalendarView.jsx
-│
-├── contexts/
-│   ├── AuthContext.jsx
-│   ├── ShipContext.jsx
-│   ├── JobContext.jsx
-│   └── ComponentContext.jsx
-│
-├── pages/
-│   ├── Home.jsx
-│   ├── Dashboard.jsx
-│   └── Login.jsx
-│
-├── utils/
-│   └── localStorageHelper.js
-│
-├── App.jsx
-└── main.jsx
+
 
 🧪 How to Run Locally
 bash
@@ -71,6 +55,24 @@ cd ship-maintenance-dashboard
 
 npm install
 npm run dev
+
+✅ Completed Functionality Checklist
+ Login with role selection
+ Dashboard with KPIs & charts
+ Job list with filters
+ Calendar view for job schedule
+ Ship and component detail view
+ Maintenance history tracking
+ LocalStorage-based data persistence
+ Custom responsive UI
+ 
+📌 Final Notes
+This project is built with a strong focus on clarity, functionality, and clean design. It demonstrates:
+Ability to manage complex state via Context
+Data persistence with localStorage
+Real-world UI challenges (modals, filtering, conditional rendering)
+Full lifecycle of a dashboard: login → dashboard → detail views
+
 
 ✅ Completed Functionality Checklist
  Login with role selection
