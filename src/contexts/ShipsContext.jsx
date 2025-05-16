@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer, useEffect } from "react";
-
+import {data} from './data.js';
 const initialState = {
-  ships: JSON.parse(localStorage.getItem("ships")) || [],
+  ships: JSON.parse(localStorage.getItem("ships")) || data.ships,
 };
 
 const shipReducer = (state, action) => {
