@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer, useEffect } from "react";
-import {data} from './data.js';
+import {data} from '../data.js';
 const initialState = {
-  ships: JSON.parse(localStorage.getItem("ships")) || data.ships,
+  ships: JSON.parse(localStorage.getItem("ships")) || data.ships||[],
 };
 
 const shipReducer = (state, action) => {
@@ -44,4 +44,4 @@ export const ShipProvider = ({ children }) => {
   );
 };
 
-export const useShip = () => useContext(ShipContext);
+export const useShip =()=> useContext(ShipContext);
