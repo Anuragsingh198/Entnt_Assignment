@@ -105,7 +105,7 @@ const ShipList = () => {
               <th className="px-4 py-3">IMO Number</th>
               <th className="px-4 py-3">Flag</th>
               <th className="px-4 py-3">Status</th>
-        {isAdmin && <th className="px-4 py-3">Actions</th>}
+          <th className="px-4 py-3">Actions</th>
             </tr>
           </thead>
           <tbody>
