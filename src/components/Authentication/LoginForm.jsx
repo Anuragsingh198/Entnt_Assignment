@@ -95,8 +95,8 @@ const Login = () => {
         <div className="mt-6 text-center text-sm text-gray-600">
           <p>Demo Accounts:</p>
           <p className="text-gray-500">Admin: admin@entnt.in / admin123</p>
-          <p className="text-gray-500">Inspector: inspector@entnt.in / inspector123</p>
-          <p className="text-gray-500">Engineer: engineer@entnt.in / engineer123</p>
+          <p className="text-gray-500">Inspector: inspector@entnt.in / inspect123</p>
+          <p className="text-gray-500">Engineer: engineer@entnt.in / engine123</p>
         </div>
       </div>
     </div>
