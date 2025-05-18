@@ -2,7 +2,7 @@
 A fully functional Ship Maintenance Dashboard built using React + Vite, designed to manage ships, components, and job scheduling with detailed analytics and role-based access. This project was built as part of an assignment and includes all the features mentioned in the provided specification.
 
 🔗 Live Demo
-👉 [https://entnt-assignment-flame.vercel.app](https://entnt-assignment-phi.vercel.app/)
+👉 [https://entnt-assignment-flame.vercel.app]([https://entnt-assignment-phi.vercel.app/](https://entnt-assignment-phi.vercel.app/))
 
 🚢 Ship Maintenance Dashboard
 A fully functional Ship Maintenance Dashboard built using React + Vite, designed to manage ships, components, and job scheduling with detailed analytics and role-based access. This project was built as part of an assignment and includes all the features mentioned in the provided specification.
@@ -93,5 +93,5 @@ Full lifecycle of a dashboard: login → dashboard → detail views
 
 If you're a recruiter or reviewer:
 Please explore the live demo at:
-🔗 [https://entnt-assignment-flame.vercel.app](https://entnt-assignment-phi.vercel.app/)
+🔗 [https://entnt-assignment-flame.vercel.app]([https://entnt-assignment-phi.vercel.app/](https://entnt-assignment-phi.vercel.app/))
 
